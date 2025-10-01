@@ -7,10 +7,23 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <%#<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sliderMenu" class="col-md-3 col lg-2 d-md-block bg-light sidebar collaspe"></nav>
+        <div class="position-stickey pt-3">
+          <ul class="nav flex-solumn">
+            <li class="nav-item">
+              <%= link_to "トップ", root_path
+            </li>
+          </ul>
+            
+        </div>
+    </div>
+  </div>
     <%= yield %>
   </body>
 </html>
