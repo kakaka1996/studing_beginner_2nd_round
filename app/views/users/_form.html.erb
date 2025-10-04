@@ -12,16 +12,16 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
+    <%= form.label :name, "名前", style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
   <div>
-    <%= form.label :age, style: "display: block" %>
+    <%= form.label :age, "年齢", style: "display: block" %>
     <%= form.number_field :age %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit  "登録" %>
   </div>
 <% end %>
