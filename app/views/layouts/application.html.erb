@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      <%#<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -13,17 +16,21 @@
   <body>
   <div class="container-fluid">
     <div class="row">
-      <nav id="sliderMenu" class="col-md-3 col lg-2 d-md-block bg-light sidebar collaspe"></nav>
-        <div class="position-stickey pt-3">
-          <ul class="nav flex-solumn">
+      <nav id="sliderMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
             <li class="nav-item">
-              <%= link_to "トップ", root_path
+              <%= link_to "トップ",  top_index_path, class: 'nav-link active', 'aria-current': 'page'  %>
+              <%= link_to 'ユーザー', users_path, class: 'nav-link active', 'aria-current': 'page' %>
             </li>
           </ul>
-            
         </div>
+      </nav>
+
+      <main class="col-md-9 ms-ms-auto col-lg-10 px-md-4">
+        <%= yield %>
     </div>
   </div>
-    <%= yield %>
+    
   </body>
 </html>
