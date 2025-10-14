@@ -37,3 +37,4 @@ end
 
 # Windows 用 (WSL では基本不要だが残してもOK)
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'pry-rails'
