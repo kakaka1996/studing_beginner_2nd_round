@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   # GET /users or /users.json
   def index
     @users = User.all
+    @index_title = "ユーザー一覧"
   end
 
   # GET /users/1 or /users/1.json
@@ -13,6 +14,7 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    
   end
 
   # GET /users/1/edit
@@ -22,7 +24,6 @@ class UsersController < ApplicationController
   # POST /users or /users.json
   def create
     @user = User.new(user_params)
-
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: "ユーザーの新規登録に成功しました" }
